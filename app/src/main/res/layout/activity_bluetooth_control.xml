@@ -1,0 +1,270 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mayank.androidconnection.BluetoothControl">
+
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="ResultantText"
+        android:id="@+id/ResultText"
+        android:layout_gravity="center"
+        android:textSize="35sp"
+        android:layout_marginTop="30dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:id="@+id/speakLinearLayout">
+
+        <TextView
+            android:id="@+id/speak"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="#03A9F4"
+            android:gravity="center"
+            android:text="Speak"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff"
+            android:textSize="35sp" />
+
+        <ImageButton
+            android:id="@+id/microphoneButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="#03A9F4"
+            android:src="@raw/microphone"
+            android:onClick="onClickMicrophoneButton" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollviewLinearLayout"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+    <LinearLayout
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#4FC3F7"
+        android:orientation="vertical"
+        android:id="@+id/lightLinearLayout">
+
+        <TextView
+            android:id="@+id/lights"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:background="#03A9F4"
+            android:gravity="left|center"
+            android:paddingLeft="30dp"
+            android:text="Lights"
+            android:textColor="#ffffff"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/lighton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:padding="15dp"
+                android:src="@raw/bulbon2" />
+
+            <ImageButton
+                android:id="@+id/lightoff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:padding="15dp"
+                android:src="@raw/bulboff2" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:weightSum="1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#4FC3F7"
+        android:orientation="vertical"
+        android:id="@+id/fanLinearLayout">
+
+        <TextView
+            android:id="@+id/fans"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:background="#03A9F4"
+            android:gravity="left|center"
+            android:paddingLeft="30dp"
+            android:text="Fan"
+            android:textColor="#ffffff"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/fanoff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:padding="15dp"
+                android:src="@raw/fanon2" />
+
+            <ImageButton
+                android:id="@+id/fanon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:padding="15dp"
+                android:src="@raw/fanon2" />
+        </LinearLayout>
+    </LinearLayout>
+        <LinearLayout
+            android:weightSum="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#4FC3F7"
+            android:orientation="vertical"
+            android:id="@+id/swicth3LinearLayout">
+
+            <TextView
+                android:id="@+id/switch3"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:background="#03A9F4"
+                android:gravity="left|center"
+                android:paddingLeft="30dp"
+                android:text="Swicth 3"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/switch3off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:padding="15dp"
+                    android:src="@raw/offtext" />
+
+                <ImageButton
+                    android:id="@+id/switch3on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:padding="15dp"
+                    android:src="@raw/ontext" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:weightSum="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#4FC3F7"
+            android:orientation="vertical"
+            android:id="@+id/swicth4LinearLayout">
+
+            <TextView
+                android:id="@+id/switch4"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:background="#03A9F4"
+                android:gravity="left|center"
+                android:paddingLeft="30dp"
+                android:text="Swicth 4"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/switch4off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:padding="15dp"
+                    android:src="@raw/offtext" />
+
+                <ImageButton
+                    android:id="@+id/switch4on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:padding="15dp"
+                    android:src="@raw/ontext" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
+
